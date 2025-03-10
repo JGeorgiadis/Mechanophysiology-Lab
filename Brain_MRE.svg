@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f8f8"/>
+  
+  <!-- Simplified Reciprocating Piston with just rod and flat head -->
+  <g transform="translate(150, 200)">
+    <!-- Piston rod -->
+    <rect id="piston-rod" x="-100" y="-5" width="130" height="10" fill="#999999" stroke="#666666" stroke-width="2">
+      <animate attributeName="width" dur="1s" repeatCount="indefinite" 
+        values="130;150;130" />
+    </rect>
+    
+    <!-- Flat piston head (width matched to waves) -->
+    <rect id="piston-head" x="30" y="-50" width="4" height="100" fill="#777777" stroke="#666666" stroke-width="2">
+      <animate attributeName="x" dur="1s" repeatCount="indefinite" 
+        values="30;50;30" />
+    </rect>
+  </g>
+  
+  <!-- Sound waves - starting from piston head -->
+  <path d="M 200 200 Q 250 160, 300 200 Q 350 240, 400 200 Q 450 160, 500 200" fill="none" stroke="#5599ff" stroke-width="4" stroke-dasharray="0,0">
+    <animate attributeName="d" dur="2s" repeatCount="indefinite" 
+      values="M 200 200 Q 250 160, 300 200 Q 350 240, 400 200 Q 450 160, 500 200;
+              M 200 200 Q 250 240, 300 200 Q 350 160, 400 200 Q 450 240, 500 200;
+              M 200 200 Q 250 160, 300 200 Q 350 240, 400 200 Q 450 160, 500 200"/>
+  </path>
+  <path d="M 200 200 Q 250 240, 300 200 Q 350 160, 400 200 Q 450 240, 500 200" fill="none" stroke="#5599ff" stroke-width="4" stroke-dasharray="0,0" opacity="0.7">
+    <animate attributeName="d" dur="1.5s" repeatCount="indefinite" 
+      values="M 200 200 Q 250 240, 300 200 Q 350 160, 400 200 Q 450 240, 500 200;
+              M 200 200 Q 250 160, 300 200 Q 350 240, 400 200 Q 450 160, 500 200;
+              M 200 200 Q 250 240, 300 200 Q 350 160, 400 200 Q 450 240, 500 200"/>
+  </path>
+  <path d="M 200 150 Q 250 110, 300 150 Q 350 190, 400 150 Q 450 110, 500 150" fill="none" stroke="#5599ff" stroke-width="4" stroke-dasharray="0,0" opacity="0.5">
+    <animate attributeName="d" dur="2s" repeatCount="indefinite" 
+      values="M 200 150 Q 250 110, 300 150 Q 350 190, 400 150 Q 450 110, 500 150;
+              M 200 150 Q 250 190, 300 150 Q 350 110, 400 150 Q 450 190, 500 150;
+              M 200 150 Q 250 110, 300 150 Q 350 190, 400 150 Q 450 110, 500 150"/>
+  </path>
+  <path d="M 200 250 Q 250 210, 300 250 Q 350 290, 400 250 Q 450 210, 500 250" fill="none" stroke="#5599ff" stroke-width="4" stroke-dasharray="0,0" opacity="0.5">
+    <animate attributeName="d" dur="2s" repeatCount="indefinite" 
+      values="M 200 250 Q 250 210, 300 250 Q 350 290, 400 250 Q 450 210, 500 250;
+              M 200 250 Q 250 290, 300 250 Q 350 210, 400 250 Q 450 290, 500 250;
+              M 200 250 Q 250 210, 300 250 Q 350 290, 400 250 Q 450 210, 500 250"/>
+  </path>
+  
+  <!-- Bold Black Circle surrounding brain with MRI coil label -->
+  <circle cx="400" cy="200" r="125" fill="none" stroke="black" stroke-width="5"/>
+  
+  <!-- MRI coil label and arrow -->
+  <text x="180" y="70" font-family="Arial, sans-serif" font-size="16" fill="#333">MRI coil</text>
+  <path d="M 220 75 L 290 130" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Coronal Cross-Section Brain -->
+  <g transform="translate(400, 200) scale(0.8)">
+    <!-- Brain outline -->
+    <path d="M -70,-65 C -50,-85 -20,-95 0,-95 C 20,-95 50,-85 70,-65 C 90,-45 100,-10 100,10 C 100,30 90,50 70,65 C 50,75 20,80 0,80 C -20,80 -50,75 -70,65 C -90,50 -100,30 -100,10 C -100,-10 -90,-45 -70,-65" 
+          fill="#f1d8d0" fill-opacity="0.6" stroke="#c0968c" stroke-width="3">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -70,-65 C -50,-85 -20,-95 0,-95 C 20,-95 50,-85 70,-65 C 90,-45 100,-10 100,10 C 100,30 90,50 70,65 C 50,75 20,80 0,80 C -20,80 -50,75 -70,65 C -90,50 -100,30 -100,10 C -100,-10 -90,-45 -70,-65;
+                M -75,-60 C -55,-80 -25,-90 0,-90 C 25,-90 55,-80 75,-60 C 95,-40 105,-5 105,15 C 105,35 95,55 75,70 C 55,80 25,85 0,85 C -25,85 -55,80 -75,70 C -95,55 -105,35 -105,15 C -105,-5 -95,-40 -75,-60;
+                M -70,-65 C -50,-85 -20,-95 0,-95 C 20,-95 50,-85 70,-65 C 90,-45 100,-10 100,10 C 100,30 90,50 70,65 C 50,75 20,80 0,80 C -20,80 -50,75 -70,65 C -90,50 -100,30 -100,10 C -100,-10 -90,-45 -70,-65"/>
+    </path>
+    
+    <!-- Gray matter cortex layer -->
+    <path d="M -70,-65 C -50,-85 -20,-95 0,-95 C 20,-95 50,-85 70,-65 C 90,-45 100,-10 100,10 C 100,30 90,50 70,65 C 50,75 20,80 0,80 C -20,80 -50,75 -70,65 C -90,50 -100,30 -100,10 C -100,-10 -90,-45 -70,-65"
+          fill="none" stroke="#e8c4b8" stroke-width="12" stroke-opacity="0.3">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -70,-65 C -50,-85 -20,-95 0,-95 C 20,-95 50,-85 70,-65 C 90,-45 100,-10 100,10 C 100,30 90,50 70,65 C 50,75 20,80 0,80 C -20,80 -50,75 -70,65 C -90,50 -100,30 -100,10 C -100,-10 -90,-45 -70,-65;
+                M -75,-60 C -55,-80 -25,-90 0,-90 C 25,-90 55,-80 75,-60 C 95,-40 105,-5 105,15 C 105,35 95,55 75,70 C 55,80 25,85 0,85 C -25,85 -55,80 -75,70 C -95,55 -105,35 -105,15 C -105,-5 -95,-40 -75,-60;
+                M -70,-65 C -50,-85 -20,-95 0,-95 C 20,-95 50,-85 70,-65 C 90,-45 100,-10 100,10 C 100,30 90,50 70,65 C 50,75 20,80 0,80 C -20,80 -50,75 -70,65 C -90,50 -100,30 -100,10 C -100,-10 -90,-45 -70,-65"/>
+    </path>
+    
+    <!-- White matter -->
+    <path d="M -60,-55 C -40,-75 -15,-85 0,-85 C 15,-85 40,-75 60,-55 C 75,-40 85,-10 85,10 C 85,25 75,40 60,55 C 40,65 15,70 0,70 C -15,70 -40,65 -60,55 C -75,40 -85,25 -85,10 C -85,-10 -75,-40 -60,-55" 
+          fill="#f8e8e0" fill-opacity="0.5" stroke="none">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -60,-55 C -40,-75 -15,-85 0,-85 C 15,-85 40,-75 60,-55 C 75,-40 85,-10 85,10 C 85,25 75,40 60,55 C 40,65 15,70 0,70 C -15,70 -40,65 -60,55 C -75,40 -85,25 -85,10 C -85,-10 -75,-40 -60,-55;
+                M -65,-50 C -45,-70 -20,-80 0,-80 C 20,-80 45,-70 65,-50 C 80,-35 90,-5 90,15 C 90,30 80,45 65,60 C 45,70 20,75 0,75 C -20,75 -45,70 -65,60 C -80,45 -90,30 -90,15 C -90,-5 -80,-35 -65,-50;
+                M -60,-55 C -40,-75 -15,-85 0,-85 C 15,-85 40,-75 60,-55 C 75,-40 85,-10 85,10 C 85,25 75,40 60,55 C 40,65 15,70 0,70 C -15,70 -40,65 -60,55 C -75,40 -85,25 -85,10 C -85,-10 -75,-40 -60,-55"/>
+    </path>
+    
+    <!-- Longitudinal fissure -->
+    <path d="M 0,-95 C -5,-65 5,-35 0,-5" fill="none" stroke="#d4a596" stroke-width="2">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M 0,-95 C -5,-65 5,-35 0,-5;
+                M 0,-90 C -8,-60 8,-30 0,0;
+                M 0,-95 C -5,-65 5,-35 0,-5"/>
+    </path>
+    <path d="M 0,-5 C -5,25 5,55 0,80" fill="none" stroke="#d4a596" stroke-width="2">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M 0,-5 C -5,25 5,55 0,80;
+                M 0,0 C -8,30 8,60 0,85;
+                M 0,-5 C -5,25 5,55 0,80"/>
+    </path>
+    
+    <!-- Corpus callosum -->
+    <path d="M -20,-5 C -10,-10 10,-10 20,-5 C 30,0 30,5 20,10 C 10,15 -10,15 -20,10 C -30,5 -30,0 -20,-5" 
+          fill="#f0dbd3" stroke="#c0968c" stroke-width="1.5">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -20,-5 C -10,-10 10,-10 20,-5 C 30,0 30,5 20,10 C 10,15 -10,15 -20,10 C -30,5 -30,0 -20,-5;
+                M -25,0 C -15,-5 15,-5 25,0 C 35,5 35,10 25,15 C 15,20 -15,20 -25,15 C -35,10 -35,5 -25,0;
+                M -20,-5 C -10,-10 10,-10 20,-5 C 30,0 30,5 20,10 C 10,15 -10,15 -20,10 C -30,5 -30,0 -20,-5"/>
+    </path>
+    
+    <!-- Lateral ventricles -->
+    <path d="M -40,0 C -35,-10 -30,-5 -25,0 C -20,5 -20,15 -25,20 C -30,25 -35,20 -40,15 C -45,10 -45,10 -40,0" 
+          fill="#c4e6ff" stroke="#a0c0e0" stroke-width="1">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -40,0 C -35,-10 -30,-5 -25,0 C -20,5 -20,15 -25,20 C -30,25 -35,20 -40,15 C -45,10 -45,10 -40,0;
+                M -45,5 C -40,-5 -35,0 -30,5 C -25,10 -25,20 -30,25 C -35,30 -40,25 -45,20 C -50,15 -50,15 -45,5;
+                M -40,0 C -35,-10 -30,-5 -25,0 C -20,5 -20,15 -25,20 C -30,25 -35,20 -40,15 C -45,10 -45,10 -40,0"/>
+    </path>
+          
+    <path d="M 40,0 C 35,-10 30,-5 25,0 C 20,5 20,15 25,20 C 30,25 35,20 40,15 C 45,10 45,10 40,0" 
+          fill="#c4e6ff" stroke="#a0c0e0" stroke-width="1">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M 40,0 C 35,-10 30,-5 25,0 C 20,5 20,15 25,20 C 30,25 35,20 40,15 C 45,10 45,10 40,0;
+                M 45,5 C 40,-5 35,0 30,5 C 25,10 25,20 30,25 C 35,30 40,25 45,20 C 50,15 50,15 45,5;
+                M 40,0 C 35,-10 30,-5 25,0 C 20,5 20,15 25,20 C 30,25 35,20 40,15 C 45,10 45,10 40,0"/>
+    </path>
+    
+    <!-- Third ventricle -->
+    <path d="M -5,10 C -2,5 2,5 5,10 C 8,15 8,25 5,30 C 2,35 -2,35 -5,30 C -8,25 -8,15 -5,10" 
+          fill="#c4e6ff" stroke="#a0c0e0" stroke-width="1">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -5,10 C -2,5 2,5 5,10 C 8,15 8,25 5,30 C 2,35 -2,35 -5,30 C -8,25 -8,15 -5,10;
+                M -7,15 C -4,10 4,10 7,15 C 10,20 10,30 7,35 C 4,40 -4,40 -7,35 C -10,30 -10,20 -7,15;
+                M -5,10 C -2,5 2,5 5,10 C 8,15 8,25 5,30 C 2,35 -2,35 -5,30 C -8,25 -8,15 -5,10"/>
+    </path>
+    
+    <!-- Thalamus (paired structures) -->
+    <path d="M -30,10 C -25,5 -15,5 -10,10 C -5,15 -5,25 -10,30 C -15,35 -25,35 -30,30 C -35,25 -35,15 -30,10" 
+          fill="#e8b8a8" stroke="#c0968c" stroke-width="1.5">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -30,10 C -25,5 -15,5 -10,10 C -5,15 -5,25 -10,30 C -15,35 -25,35 -30,30 C -35,25 -35,15 -30,10;
+                M -35,15 C -30,10 -20,10 -15,15 C -10,20 -10,30 -15,35 C -20,40 -30,40 -35,35 C -40,30 -40,20 -35,15;
+                M -30,10 C -25,5 -15,5 -10,10 C -5,15 -5,25 -10,30 C -15,35 -25,35 -30,30 C -35,25 -35,15 -30,10"/>
+    </path>
+          
+    <path d="M 30,10 C 25,5 15,5 10,10 C 5,15 5,25 10,30 C 15,35 25,35 30,30 C 35,25 35,15 30,10" 
+          fill="#e8b8a8" stroke="#c0968c" stroke-width="1.5">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M 30,10 C 25,5 15,5 10,10 C 5,15 5,25 10,30 C 15,35 25,35 30,30 C 35,25 35,15 30,10;
+                M 35,15 C 30,10 20,10 15,15 C 10,20 10,30 15,35 C 20,40 30,40 35,35 C 40,30 40,20 35,15;
+                M 30,10 C 25,5 15,5 10,10 C 5,15 5,25 10,30 C 15,35 25,35 30,30 C 35,25 35,15 30,10"/>
+    </path>
+    
+    <!-- Brain stem -->
+    <path d="M -15,50 C -10,45 10,45 15,50 C 20,55 20,65 15,70 C 10,75 -10,75 -15,70 C -20,65 -20,55 -15,50" 
+          fill="#e0b5a5" stroke="#c0968c" stroke-width="1.5">
+      <animate attributeName="d" dur="0.8s" repeatCount="indefinite" 
+        values="M -15,50 C -10,45 10,45 15,50 C 20,55 20,65 15,70 C 10,75 -10,75 -15,70 C -20,65 -20,55 -15,50;
+                M -18,53 C -13,48 13,48 18,53 C 23,58 23,68 18,73 C 13,78 -13,78 -18,73 C -23,68 -23,58 -18,53;
+                M -15,50 C -10,45 10,45 15,50 C 20,55 20,65 15,70 C 10,75 -10,75 -15,70 C -20,65 -20,55 -15,50"/>
+    </path>
+    
+    <!-- Cut edge highlighting -->
+    <path d="M -70,-65 C -50,-85 -20,-95 0,-95 C 20,-95 50,-85 70,-65 C 90,-45 100,-10 100,10 C 100,30 90,50 70,65 C 50,75 20,80 0,80 C -20,80 -50,75 -70,65 C -90,50 -100,30 -100,10 C -100,-10 -90,-45 -70,-65" 
+          fill="none" stroke="#d8a090" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Deleted MRI Scanner -->
+  
+  
+  <!-- Title -->
+  <text x="300" y="40" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#333">Brain Magnetic Resonance Elastography</text>
+</svg>
