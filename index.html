@@ -1,25 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>John Georgiadis Research Group</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanophysiology Research Lab | Illinois Tech</title>
+    <style>
+        /* Modern, clean styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #cc0000; /* Illinois Tech red */
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #cc0000; /* Illinois Tech red */
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #333;
+            margin: 20px 0 15px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .specialty {
+            font-style: italic;
+            font-weight: 600;
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 8px;
+            color: #666;
+        }
+        
+        .publications {
+            margin: 30px 0;
+        }
+        
+        .publications ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        
+        .publications li {
+            margin-bottom: 15px;
+        }
+        
+        .publications a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .publications a:hover {
+            color: #cc0000;
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .contact {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+        }
+        
+        .contact a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-container figure {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Mechanophysiology Research Lab at Illinois Tech</h1>
-    <p>Research Group of John G. Georgiadis, R. A. Pritzker Professor of Biomedical Engineering</p>
-   
-    <p>We specialize in Biomedical Imaging and Biomechanics</p>
-    <p><i>Contact us: <a href="mailto:jgeorgiadis@iit.edu">email Dr. John Georgiadis</a></i></p>
+    <header>
+        <h1>Mechanophysiology Research Lab</h1>
+        <p>Research Group of Dr. John Georgiadis, R. A. Pritzker Professor of Biomedical Engineering</p>
+        <p>Illinois Tech</p>
+    </header>
     
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <img src="Brain_MRE.svg" alt="Brain Magnetic Resonance Elastography" width="400">
-        <img src="Ultrasound_SWE_muscle_transverse.svg" alt="Ultrasound Shear Wave Elastography of Muscle" width="400">
-    </div>
-    <br> 
-    <h2>Publications</h2>
-<ul style="line-height: 2;">  <!-- This adds spacing instead of <br> tags -->
-    <li><a href="Publications/Naughton_2024_Accelerated_physics-inspired_skeletal_muscle_microstructure_dMRI.pdf">Accelerated, physics-inspired inference of skeletal muscle microstructure from diffusion-weighted MRI</a></li>
-    <li><a href="Publications/Agarwal_2025_Data-Driven Depiction of Aging Related Physiological Volume Shrinkage BWM.pdf">Data-Driven Depiction of Aging Related Physiological Volume Shrinkage in Brain White Matter</a></li>
-</ul>
+    <main>
+        <section>
+            <p>We specialize in <span class="specialty">Biomedical Imaging</span> and <span class="specialty">Biomechanics</span>, 
+                focusing on connecting tissue microsctructure and mechanical properties to function.</p>
+        </section>
+        
+        <section class="image-container">
+            <figure>
+                <img src="Brain_MRE.svg" alt="Brain Magnetic Resonance Elastography" width="450">
+                <figcaption class="image-caption">Brain Magnetic Resonance Elastography (MRE)</figcaption>
+            </figure>
+            <figure>
+                <img src="Ultrasound_SWE_muscle_transverse.svg" alt="Ultrasound Shear Wave Elastography of Muscle" width="450">
+                <figcaption class="image-caption">Ultrasound Shear Wave Elastography of Muscle (Transverse View)</figcaption>
+            </figure>
+        </section>
+        
+        <section class="publications">
+            <h2>Recent Publications</h2>
+            <ul>
+                <li>
+                    <a href="Publications/Naughton_2024_Accelerated_physics-inspired_skeletal_muscle_microstructure_dMRI.pdf">
+                        Naughton, et al. (2024). Accelerated, physics-inspired inference of skeletal muscle microstructure from diffusion-weighted MRI.
+                    </a>
+                </li>
+                <li>
+                    <a href="Publications/Agarwal_2025_Data-Driven Depiction of Aging Related Physiological Volume Shrinkage BWM.pdf">
+                        Agarwal, et al. (2025). Data-Driven Depiction of Aging Related Physiological Volume Shrinkage in Brain White Matter.
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>For inquiries about our research or collaboration opportunities, please contact <a href="mailto:jgeorgiadis@iit.edu">Dr. John Georgiadis</a>.</p>
+            <p>Department of Biomedical Engineering<br>
+            Illinois Institute of Technology<br>
+            3255 S. Dearborn St., Wishnick Hall 314 <br>
+            Chicago, IL 60616</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Mechanophysiology Research Lab, Illinois Tech. All rights reserved.</p>
+    </footer>
 </body>
 </html>
